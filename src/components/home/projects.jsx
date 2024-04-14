@@ -1,4 +1,4 @@
-import { Button, Card, Carousel, Col, Row, Typography } from "antd";
+import { Button, Carousel, Col, Row, Typography } from "antd";
 import { GithubOutlined, LaptopOutlined } from "@ant-design/icons";
 import React from "react";
 
@@ -20,6 +20,7 @@ const ProjectCard = (props) => {
             borderRadius: "8px",
             filter: "brightness(50%)",
           }}
+          alt="Project thumbail"
         ></img>
         <div
           style={{
@@ -45,7 +46,7 @@ const ProjectCard = (props) => {
                 </Typography.Text>
               </Col>
               <Col style={{ margin: "10px" }}>
-                <a target="_blank" href={props.gitUrl}>
+                <a target="_blank" href={props.gitUrl} rel="noreferrer">
                   <Button
                     icon={<GithubOutlined />}
                     shape="circle"
@@ -53,7 +54,7 @@ const ProjectCard = (props) => {
                     style={{ marginRight: "10px" }}
                   />
                 </a>
-                <a target="_blank" href={props.liveUrl}>
+                <a target="_blank" href={props.liveUrl} rel="noreferrer">
                   <Button
                     icon={<LaptopOutlined />}
                     shape="circle"

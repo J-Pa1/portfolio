@@ -55,7 +55,7 @@ const Skills = () => {
       >
         {skills.map((skill) => (
           <Col>
-            <img src={skill.icon} style={{ height: "10vh" }} />
+            <img src={skill.icon} style={{ height: "10vh" }} alt="skill icon" />
           </Col>
         ))}
       </Row>
