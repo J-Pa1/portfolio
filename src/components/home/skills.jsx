@@ -32,10 +32,13 @@ const Skills = () => {
     "NodeJs",
     "PostgreSQL",
     "MySQL",
+    "Responsive Design",
+    "Web Sockets",
+    "OAuth 2.0",
+    "Microservice Architecture",
     "RabbitMQ",
     "HTML",
     "CSS",
-    "SpringBoot",
   ];
 
   return (
@@ -59,7 +62,7 @@ const Skills = () => {
           </Col>
         ))}
       </Row>
-      <Row gutter={50} style={{ margin: "50px 25%" }}>
+      <Row gutter={50} style={{ margin: "50px 25%" }} justify="center">
         {allSkills.map((skill) => (
           <Tag
             style={{
