@@ -21,15 +21,24 @@ const Home = () => {
         <Row>
           <Typography.Title
             level={3}
-            style={{ color: "#fff", marginTop: "0px" }}
+            style={{
+              color: "#fff",
+              margin: "0px",
+              padding: "0px",
+              fontSize: "small",
+            }}
           >
-            I am a{" "}
-            <span style={{ color: "#7FC7D9" }}>Full Stack Web Developer.</span>
+            <div className="typewriter">
+              I am a{" "}
+              <span style={{ color: "#7FC7D9" }}>
+                Full Stack Web Developer.
+              </span>
+            </div>
           </Typography.Title>
         </Row>
       </Col>
       <Col xs={24} md={10}>
-        <img src={programmer} />
+        <img src={programmer} alt="Programmer SVG icon" />
       </Col>
     </Row>
   );

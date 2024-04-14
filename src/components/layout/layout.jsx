@@ -1,12 +1,11 @@
 import React from "react";
 import Header from "./header/header";
-import Router from "./router/router";
-import Footer from "./footer/footer";
 import Home from "../home/home";
 import Skills from "../home/skills";
 import Experience from "../home/experience";
 import Projects from "../home/projects";
 import Education from "../home/education";
+import About from "../home/about";
 
 const Layout = () => {
   return (
@@ -20,7 +19,7 @@ const Layout = () => {
         <Experience />
         <Projects />
         <Education />
-        <Footer />
+        <About />
       </div>
     </div>
   );

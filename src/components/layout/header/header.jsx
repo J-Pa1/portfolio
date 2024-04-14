@@ -35,6 +35,9 @@ const Header = () => {
           <Button type="link" className="nav" href="#education">
             Education
           </Button>
+          <Button type="link" className="nav" href="#about">
+            About
+          </Button>
         </Typography.Title>
       </Col>
     </Row>
