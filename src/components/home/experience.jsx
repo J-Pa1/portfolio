@@ -81,8 +81,12 @@ const Experience = () => {
       </Typography.Title>
       <div style={{ padding: "1% 10%" }}>
         <Card
-          style={{ backgroundColor: "rgba(255,255,255,0.1)", padding: "0 10%" }}
-          bordered={false}
+          style={{
+            backgroundColor: "rgba(255,255,255,0.1)",
+            padding: "0 10%",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+            backdropFilter: "blur(5px)",
+          }}
         >
           <Timeline
             mode="left"

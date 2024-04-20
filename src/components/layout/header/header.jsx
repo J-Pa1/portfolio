@@ -1,5 +1,11 @@
-import { Button, Col, Row, Typography } from "antd";
+import { Button, Col, Row, Tooltip, Typography } from "antd";
 import React from "react";
+import skills from "../../../svgs/skills.svg";
+import about from "../../../svgs/about.svg";
+import experience from "../../../svgs/experience.svg";
+import education from "../../../svgs/graduation.svg";
+import projects from "../../../svgs/projects.svg";
+import home from "../../../svgs/home.svg";
 
 const Header = () => {
   return (
@@ -15,29 +21,54 @@ const Header = () => {
         md={15}
         style={{
           textAlign: "center",
-          verticalAlign: "middle",
+          verticalAlign: "center",
         }}
       >
         <Typography.Title level={3}>
-          <Button type="link" className="nav" href="#home">
-            Home
-          </Button>
-
-          <Button type="link" className="nav" href="#skills">
-            Skills
-          </Button>
-          <Button type="link" className="nav" href="#experience">
-            Experience
-          </Button>
-          <Button type="link" className="nav" href="#projects">
-            Projects
-          </Button>
-          <Button type="link" className="nav" href="#education">
-            Education
-          </Button>
-          <Button type="link" className="nav" href="#about">
-            About
-          </Button>
+          <Tooltip text="Home">
+            <Button
+              type="link"
+              className="nav"
+              shape="circle"
+              href="#home"
+              icon={<img src={home} className="navicon" />}
+            />
+          </Tooltip>
+          <Button
+            type="link"
+            className="nav"
+            shape="circle"
+            href="#skills"
+            icon={<img src={skills} className="navicon" />}
+          />
+          <Button
+            type="link"
+            className="nav"
+            shape="circle"
+            href="#experience"
+            icon={<img src={experience} className="navicon" />}
+          />
+          <Button
+            type="link"
+            className="nav"
+            shape="circle"
+            href="#projects"
+            icon={<img src={projects} className="navicon" />}
+          />
+          <Button
+            type="link"
+            className="nav"
+            shape="circle"
+            href="#education"
+            icon={<img src={education} className="navicon" />}
+          />
+          <Button
+            type="link"
+            className="nav"
+            shape="circle"
+            href="#about"
+            icon={<img src={about} className="navicon" />}
+          />
         </Typography.Title>
       </Col>
     </Row>

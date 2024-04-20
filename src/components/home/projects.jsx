@@ -17,8 +17,11 @@ const ProjectCard = (props) => {
           src={props.projectThumbnail}
           style={{
             maxWidth: "100%",
-            borderRadius: "8px",
-            filter: "brightness(50%)",
+            filter: "brightness(30%)",
+            position: "absolute",
+            height: "100%",
+            objectFit: "cover",
+            bottom: 0,
           }}
           alt="Project thumbail"
         ></img>
@@ -29,7 +32,6 @@ const ProjectCard = (props) => {
             width: "100%",
             height: "fit-content",
             backgroundImage: "linear-gradient(rgba(0,0,0,0), rgba(0,0,0,1))",
-            borderRadius: "8px",
           }}
         >
           <div style={{ padding: "10% 5% 5% 5%" }}>
@@ -46,21 +48,25 @@ const ProjectCard = (props) => {
                 </Typography.Text>
               </Col>
               <Col style={{ margin: "10px" }}>
-                <a target="_blank" href={props.gitUrl} rel="noreferrer">
-                  <Button
-                    icon={<GithubOutlined />}
-                    shape="circle"
-                    type="primary"
-                    style={{ marginRight: "10px" }}
-                  />
-                </a>
-                <a target="_blank" href={props.liveUrl} rel="noreferrer">
-                  <Button
-                    icon={<LaptopOutlined />}
-                    shape="circle"
-                    type="primary"
-                  />
-                </a>
+                {props.gitUrl && (
+                  <a target="_blank" href={props.gitUrl} rel="noreferrer">
+                    <Button
+                      icon={<GithubOutlined />}
+                      shape="circle"
+                      type="primary"
+                      style={{ marginRight: "10px" }}
+                    />
+                  </a>
+                )}
+                {props.liveUrl && (
+                  <a target="_blank" href={props.liveUrl} rel="noreferrer">
+                    <Button
+                      icon={<LaptopOutlined />}
+                      shape="circle"
+                      type="primary"
+                    />
+                  </a>
+                )}
               </Col>
             </Row>
           </div>
@@ -85,11 +91,12 @@ const Projects = () => {
             title="My Portfolio"
             desc="This site serves as a showcase of my skills, experience, and projects. Explore my work, learn about my background"
             gitUrl="https://github.com/J-Pa1/portfolio"
+            liveUrl="https://pavankumarjayanthi-portfolio.netlify.app"
             projectThumbnail="assets/project-thumbnails/portfolio.png"
           />
           <ProjectCard
             title="ChatApp"
-            desc="Under development"
+            desc="Work in progress, yet to make first commit"
             projectThumbnail="assets/project-thumbnails/chatApp.png"
           />
         </Carousel>

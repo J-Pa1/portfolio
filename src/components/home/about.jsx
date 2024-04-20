@@ -1,9 +1,10 @@
-import { Col, Row, Typography } from "antd";
+import { Button, Col, Row, Typography } from "antd";
 import React from "react";
+import Details from "../../constants/details";
 
 const About = () => {
   const getExp = () => {
-    let joiningDate = new Date("Aug 8, 2021");
+    let joiningDate = new Date(Details.joiningDate);
     let totalMonths = Math.round(
       (new Date() - joiningDate) / (1000 * 60 * 60 * 24 * 30)
     );
@@ -46,6 +47,45 @@ const About = () => {
             web development. Proven ability to deliver high-quality web
             solutions, proficient in front-end and back-end technologies, and
             passionate about creating responsive, user-friendly websites.
+          </div>
+
+          <div style={{ marginTop: "20px" }}>
+            <div style={{ display: "flex", gap: "25px" }}>
+              <Button type="text" style={{ color: "white" }}>
+                Mobile: +91 9063879180
+              </Button>
+            </div>
+            <div>
+              <Button type="text" style={{ color: "white" }}>
+                Mail: pavan.9.us@gmail.com
+              </Button>
+            </div>
+            <div style={{ display: "flex", gap: "25px" }}>
+              <Button
+                type="text"
+                style={{ color: "#7FC7D9" }}
+                target="_blank"
+                href="https://www.linkedin.com/in/j-pavan-kumar/"
+              >
+                LinkedIn
+              </Button>
+              <Button
+                type="text"
+                style={{ color: "#7FC7D9" }}
+                target="_blank"
+                href="https://github.com/J-Pa1"
+              >
+                GitHub
+              </Button>
+              <Button
+                type="text"
+                style={{ color: "#7FC7D9" }}
+                target="_blank"
+                href="https://www.hackerrank.com/pa1_j"
+              >
+                Hackerrank
+              </Button>
+            </div>
           </div>
         </Col>
       </Row>

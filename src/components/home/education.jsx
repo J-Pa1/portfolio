@@ -8,7 +8,7 @@ const TimelineChild = ({ detail }) => {
         {detail.name}
       </Typography.Title>
       <Typography.Title style={{ color: "#fff" }} level={5}>
-        <span style={{ color: "#7FC7D9" }}>Passout:</span> {detail.year}
+        <span style={{ color: "#7FC7D9" }}>Year:</span> {detail.year}
       </Typography.Title>
       <Typography.Title style={{ color: "#fff" }} level={5}>
         <span style={{ color: "#7FC7D9" }}>Score:</span> {detail.score}
@@ -45,8 +45,12 @@ const Education = () => {
       </Typography.Title>
       <div style={{ padding: "1% 10%" }}>
         <Card
-          style={{ backgroundColor: "rgba(255,255,255,0.1)", padding: "0 10%" }}
-          bordered={false}
+          style={{
+            backgroundColor: "rgba(255,255,255,0.1)",
+            padding: "0 10%",
+            border: "1px solid rgba(255, 255, 255, 0.3)",
+            backdropFilter: "blur(5px)",
+          }}
         >
           <Timeline
             mode="left"
