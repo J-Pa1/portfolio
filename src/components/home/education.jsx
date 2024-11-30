@@ -1,18 +1,25 @@
 import { Card, Timeline, Typography } from "antd";
 import React from "react";
+import SlideIn from "../animated/SlideIn/SlideIn";
 
 const TimelineChild = ({ detail }) => {
   return (
     <>
       <Typography.Title style={{ color: "#fff" }} level={4}>
-        {detail.name}
+        <SlideIn direction="left">{detail.name}</SlideIn>
       </Typography.Title>
-      <Typography.Title style={{ color: "#fff" }} level={5}>
-        <span style={{ color: "#7FC7D9" }}>Year:</span> {detail.year}
-      </Typography.Title>
-      <Typography.Title style={{ color: "#fff" }} level={5}>
-        <span style={{ color: "#7FC7D9" }}>Score:</span> {detail.score}
-      </Typography.Title>
+      <SlideIn direction="left" style={{ paddingLeft: "10px" }}>
+        <Typography.Title style={{ color: "#fff" }} level={5}>
+          <div style={{ display: "flex", gap: "10px" }}>
+            <div>
+              <span style={{ color: "#7FC7D9" }}>Year:</span> {detail.year}
+            </div>
+            <div>
+              <span style={{ color: "#7FC7D9" }}>Score:</span> {detail.score}
+            </div>
+          </div>
+        </Typography.Title>
+      </SlideIn>
     </>
   );
 };
@@ -37,12 +44,14 @@ const Education = () => {
   ];
   return (
     <div id="education">
-      <Typography.Title
-        style={{ color: "#fff", textAlign: "center" }}
-        level={3}
-      >
-        Education
-      </Typography.Title>
+      <SlideIn direction="up">
+        <Typography.Title
+          style={{ color: "#fff", textAlign: "center" }}
+          level={3}
+        >
+          Education
+        </Typography.Title>
+      </SlideIn>
       <div style={{ padding: "1% 10%" }}>
         <Card
           style={{

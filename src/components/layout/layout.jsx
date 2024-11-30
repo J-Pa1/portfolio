@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "./header/header";
-import Home from "../home/home";
-import Skills from "../home/skills";
-import Experience from "../home/experience";
+import Home from "../home/Home";
+import Skills from "../home/Skills";
+import Experience from "../home/Experience";
 import Projects from "../home/projects";
-import Education from "../home/education";
-import About from "../home/about";
+import Education from "../home/Education";
+import About from "../home/About";
+import Blogs from "../home/Blogs";
 
 const Layout = () => {
   return (
@@ -17,6 +18,7 @@ const Layout = () => {
         <Home />
         <Skills />
         <Experience />
+        <Blogs />
         <Projects />
         <Education />
         <About />

@@ -1,0 +1,37 @@
+/* Home.css */
+
+/* Ensure the row takes up 90% of the viewport height */
+.home-row {
+  height: 90vh;
+}
+
+/* Styling for the text section */
+.home-text-col {
+  margin: 10%;
+  text-align: center;
+}
+
+/* Title styling */
+.home-title {
+  color: #fff !important;
+  font-size: 2rem;
+}
+
+/* Highlighting the name part */
+.highlight-text {
+  color: #7fc7d9;
+}
+
+/* Styling for the image section */
+.home-image-col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-image {
+  width: 100%;
+}
+
+.cta-container {
+}
